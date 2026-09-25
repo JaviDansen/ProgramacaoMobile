@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { Button, SafeAreaView, StyleSheet } from 'react-native';
 
 import Header from '../components/Header';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
+      <Button title="Ir para Teste" onPress={() => navigation.navigate('Teste')} />
       <StatusBar style="dark" />
     </SafeAreaView>
   );

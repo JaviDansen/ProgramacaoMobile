@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import MainTabs from './navigation/MainTabs';
+import EventEntryScreen from './screens/EventEntryScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,6 +11,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="MainTabs" component={MainTabs} />
+        <Stack.Screen
+          name="EventEntry"
+          component={EventEntryScreen}
+          options={{ headerShown: true, title: 'Entrar em um evento' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

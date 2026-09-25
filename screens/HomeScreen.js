@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Pressable, SafeAreaView, StyleSheet, Text } from 'react-native';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>BEAST MARAGAMES</Text>
@@ -9,7 +9,10 @@ export default function HomeScreen() {
       <Text style={styles.description}>
         Participe das experiências e eventos da BEAST MARAGAMES.
       </Text>
-      <Pressable style={styles.eventButton}>
+      <Pressable
+        style={styles.eventButton}
+        onPress={() => navigation.navigate('EventEntry')}
+      >
         <Text style={styles.eventButtonText}>Entrar em um evento</Text>
       </Pressable>
       <StatusBar style="dark" />

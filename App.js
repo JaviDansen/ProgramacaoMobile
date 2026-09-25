@@ -1,14 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaView, StyleSheet } from 'react-native';
 
 import Header from './components/Header';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Header />
-      <StatusBar style="dark" />
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView style={styles.container}>
+        <Header />
+        <StatusBar style="dark" />
+      </SafeAreaView>
+    </NavigationContainer>
   );
 }
 
